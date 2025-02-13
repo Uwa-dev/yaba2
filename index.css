@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root{
+  /* colors  */
+  --text-color: #402E7A;
+  --background-color: white;
+  --hover-color:#261b49;
+  --accent-color: #b2abc9;
+
+  /* font size  */
+  --biggest-font-size: 3rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+
+
+  /* font family  */
+  --heading-font: "Pacifico", serif;
+  --normal-font: "Montserrat", serif;
+  
+}
+
+@media (max-width: 500px) {
+  
+  
+  :root{
+      /* font size  */
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .875rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .795rem;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: var(--normal-font);
+  color: var(--text-color);
+}
+a{
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--normal-font)
+}
+li{
+  list-style: none;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+  height: 8vh;
+}
+ul{
+  display: flex;
+  gap: 1.5rem;
+}
+ul li a{
+  font-size: 1.3rem;
+  position: relative;
+}
+ul li a:hover{
+  color: var(--accent-color);
+}
+ul li a::before{
+  content: '';
+  position: absolute;
+  height: 2.5px;
+  width: 0;
+  background-color: var(--accent-color);
+  top: 100%;
+  border-radius: 2px;
+}
+ul li.active a::before{
+  width: 100%;
+}
+.logo{
+  font-family: var(--heading-font);
+  font-size: 2rem;
+}
+.icons{
+  font-size: var(--h2-font-size);
+  display: flex;
+  gap: 1.5rem;
+}
+.toggle-button{
+  display: none;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.toggle-button span{
+  background-color: var(--text-color);
+  height: 0.3rem;
+  width: 2rem;
+  display: block;
+  border-radius: 3px;
+}
+/* .hero-section{
+  height: 80vh;
+  background: url(./assets/ice-cream-removebg-preview.png) no-repeat;
+  background-color: var(--text-color);
+  background-size: contain;
+  background-position: center right;
+  color: #ddd;
+  position: relative;
+}
+.hero{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  line-height: 2rem;
+}
+.hero h2{
+  font-family: var(--heading-font);
+  font-size: var(--h1-font-size);
+  margin-bottom: 1rem;
+}
+.hero h3{
+  font-size: var(--h2-font-size);
+  color: var(--accent-color);
+}
+.hero span{
+  color: #2E7A75;
+} */
+/* .hero-section{
+  height: 80vh;
+  background: url(./assets/ice-cream-removebg-preview.png) no-repeat;
+  background-color: var(--text-color);
+  background-size: contain;
+  background-position: center right;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+.hero{
+  width: 50%;
+  line-height: 2rem;
+}
+.hero h2{
+  font-family: var(--heading-font);
+  font-size: var(--h1-font-size);
+  margin-bottom: 1rem;
+}
+.hero h3{
+  font-size: var(--h2-font-size);
+  color: var(--accent-color);
+}
+.hero span{
+  color: #2E7A75;
+} */
+
+.hero{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: var(--text-color);
+  color: #ddd;
+}
+.hero-img{
+  justify-self: center;
+}
+
+@media (max-width: 800px) {
+  nav{
+    padding: 0 0.5rem;
+  }
+  .toggle-button{
+    display: flex;
+  }
+  ul{
+    display: none;
+  }
+  .icons{
+    display: none;
+  }
+}
