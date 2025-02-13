@@ -1,0 +1,18 @@
+div{
+  height: 10rem;
+  width: 20rem;
+  padding: 2rem;
+}
+
+.box1{
+  background-color: blueviolet;
+  box-sizing: content-box;
+}
+.box2{
+  background-color: skyblue;
+}
+.box3{
+  background-color: cadetblue;
+  box-sizing: border-box;
+  padding: 2rem;
+}
